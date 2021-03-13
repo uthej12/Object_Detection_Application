@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Prediction</title>
+  </head>
+  <body >
+    {% extends "template.html" %}
+    {% block content %}
+    
+    <div class="container mt-5" style="text-align: center;">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="display-4">Result</h3>
+          <hr>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-8"> 
+          <div class="row">
+            <div class="container card" style="background-color: rgba(0,0,0,0.01);">
+              <div class="row" style='padding:2em;'>
+                <div class="col-12">
+                  <img src = "{{url_for('static', filename='result/final.jpg')}}">
+                </div>
+              </div>
+              <div class="row mt-5" style="padding-bottom:1em;">
+                <div class="col-3">
+        
+                </div>
+                <div class="col-3">
+                  <a href = '{{url_for("home")}}'><button class="btn btn-info">Select other image</button></a>
+                </div>
+                <div class="col-3">
+                  <a href = '{{url_for("steps")}}'><button class="btn btn-success">Show Working</button></a>
+                </div>
+                
+                <div class="col-3">
+        
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       <div class="col-2"></div>   
+      </div>
+    </div>
+    
+      
+    {% endblock %}
+  </body>
+</html>
